@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple on-line JavaScript Editor</title>
+  <style type="text/css" media="screen">
+    #usercode {
+      margin: 0px;
+      border: 0px;
+      max-width: 100%;
+      max-height: 700px;
+      min-height: 350px;
+      height: 70%;
+    }
+
+    #executionresult {
+      margin: 0px;
+      border: 0px;
+      width: 100%;
+      max-width: 100%;
+      resize: none;
+      overflow: auto;
+      height: 100%;
+    }
+
+    #editorcontainer {
+      overflow-y: hidden;
+      overflow-x: hidden;
+      resize: both;
+      border: 1px solid;
+      border-color: #A9A9A9;
+      width: 702px;
+      height: 100%;
+      min-width: 100px;
+      max-width: 99%;
+    }
+
+    body {
+        background-color: #e6e6e6;
+    }
+  </style>
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="main.js"></script>
+
+</head>
+<body>
+
+  <button onclick="executeCode(); return false;"><i class="fa fa-play" aria-hidden="true"></i> Run</button>
+  <button onclick="loadSample(); return false;"><i class="fa fa-floppy-o" aria-hidden="true"></i> Load Sample</button>
+  <button onclick="helpMe(); return false;"><i class="fa fa-question" aria-hidden="true"></i>
+</i> Help</button>  
+  <input type="checkbox" 
+        name="enableAutoComplete" 
+        value="false" 
+        onchange="autoCompleteChanged(this); return false;"/>Auto-complete
+
+  <div id="editorcontainer">
+
+  <pre id="usercode"></pre>
+
+  <textarea id="executionresult"
+            rows="8" 
+            cols="5"
+            readonly>Type your JavaScript code on the editor above and click "Run".
+The result of the execution will be displayed here.</textarea>
+
+  <script src="ace/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="ace/ext-language_tools.js"></script>
+</div>
+
+<script>
+    ace.require("ace/ext/language_tools");
+    let editor = ace.edit("usercode");
+    editor.setTheme("ace/theme/twilight");
+    editor.session.setMode("ace/mode/javascript");
+    editor.setFontSize(15);
+    editor.focus();
+</script>
+
+</body>
+</html>

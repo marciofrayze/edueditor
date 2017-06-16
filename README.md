@@ -1,2 +1,4 @@
-# simple-javascript-editor
-A simple on-line JavaScript editor
+# Simple JavaScript on-line Editor
+
+Just another simple on-line JavaScript editor
+
