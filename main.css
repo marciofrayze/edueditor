@@ -1,0 +1,38 @@
+#usercode {
+    margin: 0px;
+    border: 0px;
+    max-width: 100%;
+    max-height: 700px;
+    min-height: 350px;
+    height: 70%;
+}
+
+#executionresult {
+    margin: 0px;
+    border: 0px;
+    width: 100%;
+    max-width: 100%;
+    resize: none;
+    overflow: auto;
+    height: 100%;
+}
+
+#editorcontainer {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    resize: both;
+    border: 1px solid;
+    border-color: #A9A9A9;
+    width: 702px;
+    height: 100%;
+    min-width: 100px;
+    max-width: 99%;
+}
+
+#enableAutoComplete {
+    vertical-align: middle;    
+}
+
+body {
+    background-color: #e6e6e6;
+}
