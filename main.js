@@ -54,3 +54,8 @@ function autoCompleteChanged(el) {
     });    
   }
 }
+
+window.onload = function() { 
+    /* Disables Ace editor missing semi colon warning message */
+    editor.session.$worker.call("changeOptions", [{asi: true}]);
+}
