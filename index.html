@@ -35,6 +35,10 @@
       max-width: 99%;
     }
 
+    #enableAutoComplete {
+      vertical-align: middle;    
+    }
+
     body {
         background-color: #e6e6e6;
     }
@@ -51,9 +55,9 @@
   <button onclick="helpMe(); return false;"><i class="fa fa-question" aria-hidden="true"></i>
 </i> Help</button>  
   <input type="checkbox" 
-        name="enableAutoComplete" 
-        value="false" 
-        onchange="autoCompleteChanged(this); return false;"/>Auto-complete
+         id="enableAutoComplete"
+         value="false" 
+         onchange="autoCompleteChanged(this); return false;"/>Auto-complete
 
   <div id="editorcontainer">
 
