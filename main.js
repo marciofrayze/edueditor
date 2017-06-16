@@ -42,22 +42,28 @@ function executeCode() {
 
 function loadSample() {
     alert("Load sample option is not implemented yet :(")
+
+    editor.focus();
 }
 
 function helpMe() {
     alert("Help me option is not implemented yet :(")
+
+    editor.focus();
 }
 
 function autoCompleteChanged(el) {
-  if (el.checked) {
-    editor.setOptions({
-        enableBasicAutocompletion: true
-    });    
-  } else {
-    editor.setOptions({
-        enableBasicAutocompletion: false
-    });    
-  }
+    if (el.checked) {
+        editor.setOptions({
+            enableBasicAutocompletion: true
+        });    
+    } else {
+        editor.setOptions({
+            enableBasicAutocompletion: false
+        });    
+    }
+
+    editor.focus();
 }
 
 window.onload = function() { 
