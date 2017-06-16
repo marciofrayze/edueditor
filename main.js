@@ -36,6 +36,8 @@ function executeCode() {
         console.log("\nERROR:\n" + e.message + "\n");
     }
 
+    editor.focus();
+
 }
 
 function loadSample() {
