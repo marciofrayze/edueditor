@@ -18,8 +18,11 @@ function executeCode() {
     let codeToEval = editor.getValue();
 
     try {
+        let time = new Date().toLocaleTimeString('en-US', { hour12: false, 
+                                                            hour: "numeric", 
+                                                            minute: "numeric", second: "numeric"});
 
-        console.log("Starting execution...");
+        console.log("Starting execution (" + time + ")...");
 
         let result = eval(codeToEval);
 
