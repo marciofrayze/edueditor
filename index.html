@@ -7,49 +7,49 @@
   <script src="main.js"></script>
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
+
 <body>
-
-  <div id="menu">
-    <button onclick="executeCode(); return false;">
-      <i class="fa fa-play" aria-hidden="true"></i> Run
-    </button>
-
-    <button onclick="loadSample(); return false;">
-      <i class="fa fa-floppy-o" aria-hidden="true"></i> Load Sample
-    </button>
-
-    <button onclick="helpMe(); return false;">
-      <i class="fa fa-question" aria-hidden="true"></i> Help
-    </button>
-
-    <input type="checkbox" 
-           id="enableAutoComplete"
-           value="false" 
-           onchange="autoCompleteChanged(this); return false;"/>Auto-complete
-  </div>
 
   <div id="editorcontainer">
 
-  <pre id="usercode"></pre>
+    <div id="menu">
+      <button onclick="executeCode(); return false;">
+        <i class="fa fa-play" aria-hidden="true"></i> Run
+      </button>
 
-  <textarea id="executionresult"
-            rows="8" 
-            cols="5"
-            readonly>Type your JavaScript code on the editor above and click "Run".
+      <button onclick="loadSample(); return false;">
+        <i class="fa fa-floppy-o" aria-hidden="true"></i> Load Sample
+      </button>
+
+      <button onclick="helpMe(); return false;">
+        <i class="fa fa-question" aria-hidden="true"></i> Help
+      </button>
+
+      <input type="checkbox" 
+            id="enableAutoComplete"
+            value="false" 
+            onchange="autoCompleteChanged(this); return false;"/>Auto-complete
+    </div>
+
+    <pre id="usercode"></pre>
+
+    <textarea id="executionresult"
+              readonly>Type your JavaScript code on the editor above and click "Run".
 The result of the execution will be displayed here.</textarea>
+
+  </div>
 
   <script src="ace/ace.js" type="text/javascript" charset="utf-8"></script>
   <script src="ace/ext-language_tools.js"></script>
-</div>
 
-<script>
-    ace.require("ace/ext/language_tools");
-    let editor = ace.edit("usercode");
-    editor.setTheme("ace/theme/twilight");
-    editor.session.setMode("ace/mode/javascript");
-    editor.setFontSize(15);
-    editor.focus();   
-</script>
+  <script>
+      ace.require("ace/ext/language_tools");
+      let editor = ace.edit("usercode");
+      editor.setTheme("ace/theme/twilight");
+      editor.session.setMode("ace/mode/javascript");
+      editor.setFontSize(15);
+      editor.focus();   
+  </script>
 
 </body>
 </html>
