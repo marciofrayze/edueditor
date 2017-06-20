@@ -35,21 +35,14 @@ function executeCode() {
     } catch (e) {
         console.log("\nERROR:\n" + e.message + "\n");
     }
-
-    editor.focus();
-
 }
 
 function loadSample() {
     alert("Load sample option is not implemented yet :(")
-
-    editor.focus();
 }
 
 function helpMe() {
-    alert("Help me option is not implemented yet :(")
-
-    editor.focus();
+    alert("Help option is not implemented yet :(")
 }
 
 function autoCompleteChanged(el) {
@@ -63,7 +56,6 @@ function autoCompleteChanged(el) {
         });    
     }
 
-    editor.focus();
 }
 
 window.onload = function() { 
