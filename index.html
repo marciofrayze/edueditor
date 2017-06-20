@@ -30,10 +30,19 @@
         <i class="fa fa-question" aria-hidden="true"></i> Help
       </button>
 
-      <input type="checkbox" 
-            id="enableAutoComplete"
-            value="false" 
-            onchange="autoCompleteChanged(this); return false;"/>Auto-complete
+      <div id="checkboxes">
+        <input type="checkbox" 
+              id="enableAutoPairing"
+              value="false" 
+              onchange="autoPairingChanged(this); return false;"/>Auto-pairing
+
+        <br />
+        <input type="checkbox" 
+              id="enableAutoComplete"
+              value="false" 
+              onchange="autoCompleteChanged(this); return false;"/>Auto-complete
+      </div>
+
     </div>
 
     <pre id="usercode"></pre>

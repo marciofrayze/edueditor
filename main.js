@@ -1,5 +1,5 @@
 
-/* Override console to show on the onscren-console and keeping reference to original console.log function */
+/* Override console to show on the onscren-console but keeping reference to original console.log function. */
 let _console = console.log;
 console.log = function(somethingToLog){
     let resultTextArea = document.getElementById("executionresult");
@@ -58,7 +58,18 @@ function autoCompleteChanged(el) {
 
 }
 
+function autoPairingChanged(el) {
+    if (el.checked) {
+        editor.setBehavioursEnabled(true);
+    } else {
+        editor.setBehavioursEnabled(false);
+    }
+}
+
 window.onload = function() { 
-    /* Disables Ace editor missing semi colon warning message */
+    /* Disables Ace editor missing semi colon warning message. */
     editor.session.$worker.call("changeOptions", [{asi: true}]);
+    
+    /* By default, do not auto-close parenthesis, brackets, etc */
+    editor.setBehavioursEnabled(false);
 }
