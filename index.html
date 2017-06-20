@@ -18,24 +18,24 @@
   <div id="editorcontainer">
 
     <div id="menu">
-      <button onclick="executeCode(); return false;">
+      <button onclick="executeCode();">
         <i class="fa fa-play" aria-hidden="true"></i> Run
       </button>
 
-      <button onclick="loadSample(); return false;">
+      <button onclick="loadSample();">
         <i class="fa fa-floppy-o" aria-hidden="true"></i> Load Sample
       </button>
 
-      <button onclick="helpMe(); return false;">
+      <button onclick="helpMe();">
         <i class="fa fa-question" aria-hidden="true"></i> Help
       </button>
 
-      <div id="selectLanguage">
+      <div id="selectLanguageContainer">
         <label>Language</label><br />
-        <select onchange="languageSelectChanged(this); return false;">
+        <select id="selectLanguage" onchange="languageSelectChanged(this);">
           <option value="javascript">JavaScript (ECMAScript)</option>
-          <option value="typescript">TypeScript</option>
-          <option value="python">Python</option>
+          <!-- option value="typescript">TypeScript</option>
+          <option value="python">Python</option -->
           <option value="ruby">Ruby</option>
         </select>
       </div>
@@ -44,13 +44,13 @@
         <input type="checkbox" 
               id="enableAutoPairing"
               value="false" 
-              onchange="autoPairingChanged(this); return false;"/><label for="enableAutoPairing">Auto-pairing</label>
+              onchange="autoPairingChanged(this);"/><label for="enableAutoPairing">Auto-pairing</label>
 
         <br />
         <input type="checkbox" 
               id="enableAutoComplete"
               value="false" 
-              onchange="autoCompleteChanged(this); return false;"/><label for="enableAutoComplete">Auto-complete</label>
+              onchange="autoCompleteChanged(this);"/><label for="enableAutoComplete">Auto-complete</label>
         
       </div>
 
@@ -66,6 +66,8 @@ The result of the execution will be displayed here.</textarea>
 
   <script src="ace/ace.js" type="text/javascript" charset="utf-8"></script>
   <script src="ace/ext-language_tools.js"></script>
+  <script src="http://cdn.opalrb.org/opal/current/opal.js"></script>
+  <script src="http://cdn.opalrb.org/opal/current/opal-parser.js"></script>
 
   <script>
       ace.require("ace/ext/language_tools");
@@ -74,6 +76,8 @@ The result of the execution will be displayed here.</textarea>
       editor.session.setMode("ace/mode/javascript");
       editor.setFontSize(15);
       editor.focus();   
+
+      Opal.load('opal-parser')
   </script>
 
 </body>

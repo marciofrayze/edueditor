@@ -51,7 +51,7 @@ select {
     height: 25px;
 }
 
-#selectLanguage {
+#selectLanguageContainer {
     text-align:center;
     margin-left: 3px;
 }
