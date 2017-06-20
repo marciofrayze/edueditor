@@ -66,6 +66,11 @@ function autoPairingChanged(el) {
     }
 }
 
+function languageSelectChanged(el) {
+    alert("Other languages support is not implemented yet. Only javascript :(");
+    el.selectedIndex = 0;
+}
+
 window.onload = function() { 
     /* Disables Ace editor missing semi colon warning message. */
     editor.session.$worker.call("changeOptions", [{asi: true}]);

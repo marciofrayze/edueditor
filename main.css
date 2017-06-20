@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 
     margin: 0px;
     padding: 0px;    
@@ -39,9 +40,18 @@ body {
     min-height: 50px;
     display: flex;
     align-items: center;
-    background-color: #DCDCDC;
+    background-color: #DCDCDC;   
 }
 
 #enableAutoComplete {
     vertical-align: middle;
+}
+
+select {
+    height: 25px;
+}
+
+#selectLanguage {
+    text-align:center;
+    margin-left: 3px;
 }
