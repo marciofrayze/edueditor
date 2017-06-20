@@ -7,6 +7,11 @@ html, body {
     border: 0px;
 }
 
+button {
+    height: 50px;
+    min-height: 100%;
+}
+
 body {
     height: 100%;
     min-height: 100%;
@@ -31,9 +36,10 @@ body {
 }
 
 #menu {
-    min-height: 40px;
+    min-height: 50px;
     display: flex;
     align-items: center;
+    background-color: #DCDCDC;
 }
 
 #enableAutoComplete {
