@@ -104,6 +104,7 @@ function languageSelectChanged(el) {
     switch(selectedLanguage) {
         case "javascript":
             editor.getSession().setMode("ace/mode/javascript");
+            disableAceEditorMissingSemiColonWarningMessage();
             break;
         case "ruby":
             editor.getSession().setMode("ace/mode/ruby");
@@ -117,10 +118,13 @@ function getSelectedLanguage() {
     return document.getElementById("selectLanguage").value;
 }
 
-window.onload = function() { 
-    /* Disables Ace editor missing semi colon warning message. */
+function disableAceEditorMissingSemiColonWarningMessage() {
     editor.session.$worker.call("changeOptions", [{asi: true}]);
-    
+}
+
+window.onload = function() { 
+    disableAceEditorMissingSemiColonWarningMessage();
+
     /* By default, do not auto-close parenthesis, brackets, etc */
     editor.setBehavioursEnabled(false);
 }
