@@ -33,8 +33,6 @@ function executeCode() {
                 console.log("\nERROR:\n Language not supported: " + selectedLanguage);
         }
 
-        /* TODO: Is there a better (intead of "typeof") way to avoid printing the object 
-           when running ruby code that returns an object? */
         if (result != null) {
             console.log(result);
         }    
@@ -51,7 +49,7 @@ function executeRubyCode(codeToEval) {
 
     let result = eval(transpiledCodeFromRubyToJS);
 
-    // TODO: For some reason it is adding a blank link in the end.  
+    // TODO: For some reason it is adding a blank link (or in some cases object) in the end of the result.
 
     return result;
 }

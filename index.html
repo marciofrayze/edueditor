@@ -3,10 +3,9 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
   <title>JavaScript Editor</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <script src="main.js"></script>
   <link rel="stylesheet" type="text/css" href="main.css">
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=yes"/>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
   <meta name="keywords" content="Educational Editor Javascript Typescript Ruby Python"/>
   <meta name="description" content="Simple on-line editor for teaching programming."/>
   <meta name="apple-mobile-web-app-title" content="EduDitor"/>
@@ -22,20 +21,18 @@
         <i class="fa fa-play" aria-hidden="true"></i> Run
       </button>
 
-      <button onclick="loadSample();">
+      <!-- button onclick="loadSample();">
         <i class="fa fa-floppy-o" aria-hidden="true"></i> Load Sample
-      </button>
+      </button -->
 
-      <button onclick="helpMe();">
+      <!-- button onclick="helpMe();">
         <i class="fa fa-question" aria-hidden="true"></i> Help
-      </button>
+      </button -->
 
       <div id="selectLanguageContainer">
         <label>Language</label><br />
         <select id="selectLanguage" onchange="languageSelectChanged(this);">
           <option value="javascript">JavaScript (ECMAScript)</option>
-          <!-- option value="typescript">TypeScript</option>
-          <option value="python">Python</option -->
           <option value="ruby">Ruby</option>
         </select>
       </div>
@@ -59,8 +56,9 @@
     <pre id="usercode"></pre>
 
     <textarea id="executionresult"
-              readonly>Type your JavaScript code on the editor above and click "Run".
-The result of the execution will be displayed here.</textarea>
+              readonly>Type your code on the editor above and click "Run".
+The result of the execution will be displayed here.
+EduEditor, the Educational Editor. V0.1 - CopyLeft 2017</textarea>
 
   </div>
 
@@ -80,5 +78,6 @@ The result of the execution will be displayed here.</textarea>
       Opal.load('opal-parser')
   </script>
 
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" lazyload>
 </body>
 </html>
