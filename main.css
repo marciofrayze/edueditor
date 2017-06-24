@@ -17,7 +17,8 @@ button {
     text-align: center;
     font-size: 16px;
     -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;    
+    transition-duration: 0.4s;
+    margin-right: 15px;
 }
 
 button:hover {
@@ -26,6 +27,7 @@ button:hover {
 }
 
 select {
+    margin-right: 15px;
     margin-top: 3px;
     font-size: 13px;
     border-radius: 0;
@@ -34,6 +36,7 @@ select {
 }
 
 input[type=checkbox] {
+    margin-right: 5px;
     opacity : 1;
 }
 
