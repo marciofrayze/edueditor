@@ -9,8 +9,32 @@ html, body {
 }
 
 button {
+    border: none;
     height: 50px;
     min-height: 100%;
+    width: 85px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;    
+}
+
+button:hover {
+    background-color: #3CB371;
+    color: white;
+}
+
+select {
+    margin-top: 3px;
+    font-size: 13px;
+    border-radius: 0;
+    text-align-last: center;
+}
+
+input[type=checkbox] {
+    opacity : 1;
 }
 
 body {
@@ -27,6 +51,7 @@ body {
 
 #executionresult {
     height: 100vh;
+    font-size: 13px;
 }
 
 #editorcontainer {
