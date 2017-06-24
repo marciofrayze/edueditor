@@ -1,5 +1,5 @@
 
-/* Override console to show on the onscren-console but keeping reference to original console.log function. */
+// Overrides console to show on the onscren-console but keeping reference to original console.log function.
 let _console = console.log;
 console.log = function(somethingToLog){
     let resultTextArea = document.getElementById("executionresult");
@@ -125,6 +125,18 @@ function disableAceEditorMissingSemiColonWarningMessage() {
 window.onload = function() { 
     disableAceEditorMissingSemiColonWarningMessage();
 
-    /* By default, do not auto-close parenthesis, brackets, etc */
+    // By default, do not auto-close parenthesis, brackets, etc.
     editor.setBehavioursEnabled(false);
+}
+
+document.onkeydown = function(e) {
+
+    // For IEs window event-object.
+    var e = e || window.event; 
+
+    // The "R" key is the 82 code, so let's Run the code when the user presses CTR + R.
+    if (e.ctrlKey && e.which == 82) { 
+        executeCode();
+     }
+
 }
