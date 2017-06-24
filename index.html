@@ -74,7 +74,9 @@ EduEditor, the Educational Editor. V0.1 - CopyLeft 2017.</textarea>
       editor.setTheme("ace/theme/twilight");
       editor.session.setMode("ace/mode/javascript");
       editor.setFontSize(15);
-      editor.focus();   
+      editor.focus();
+
+      Opal.load('opal-parser');
   </script>
 
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" lazyload>
