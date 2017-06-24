@@ -79,3 +79,14 @@ select {
     text-align:center;
     margin-left: 3px;
 }
+
+@media only screen and (max-width: 500px) { 
+    #editorOptions {
+        display: none;
+    }
+
+    #selectLanguageContainer {
+        margin: auto;
+        width: 50%;
+    }
+}
