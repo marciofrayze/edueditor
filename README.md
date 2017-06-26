@@ -12,7 +12,7 @@ Ace Editor - https://ace.c9.io/
 
 Opal - http://opalrb.org/
 
-Brython - https://brython.info
+Brython - http://brython.info
 
 # About the author
 
