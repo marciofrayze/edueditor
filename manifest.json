@@ -1,0 +1,8 @@
+{
+  "short_name": "EduEditor",
+  "name": "EduEditor",
+  "background_color": "#FFFFFF",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "portrait-primary"
+}

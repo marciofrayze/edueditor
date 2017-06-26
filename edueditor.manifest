@@ -1,0 +1,13 @@
+CACHE MANIFEST
+main.js
+main.css
+libs/ace/ace.js
+libs/ace/ext-language_tools.js
+libs/ace/mode-ruby.js
+libs/ace/mode-python.js
+libs/opal/opal.min.js
+libs/opal/opal-parser.min.js
+libs/brython/brython.js
+libs/ace/theme-twilight.js
+libs/ace/mode-javascript.js
+libs/ace/worker-javascript.js
