@@ -32,7 +32,7 @@ select {
     font-size: 13px;
     border-radius: 0;
     text-align-last: center;
-    -webkit-tap-highlight-color: transparent; /* Fixes weird blue blink on iOS on select */
+    -webkit-tap-highlight-color: transparent; /* Fixes weird blue blink on iOS on select. */
 }
 
 input[type=checkbox] {
@@ -63,7 +63,7 @@ body {
     height: 100%;
     flex-direction: column;
 
-    -webkit-tap-highlight-color: transparent; /* Fixes weird blue icon on iOS when page loads*/    
+    -webkit-tap-highlight-color: transparent; /* Fixes weird blue icon on iOS when page loads. */
 }
 
 #menu {
@@ -86,6 +86,7 @@ select {
     margin-left: 3px;
 }
 
+/* For screens with limited width (eg. cellphones on portrait mode). */
 @media only screen and (max-width: 500px) { 
     #editorOptions {
         display: none;
@@ -94,5 +95,14 @@ select {
     #selectLanguageContainer {
         margin: auto;
         width: 50%;
+    }
+}
+
+/* For screens with limited height (eg. cellphones on landscape mode). */
+@media only screen and (max-height: 500px) {
+    /* Makes the code div smaller to give more space for the results. */
+    #usercode {
+        height: 55%;
+        min-height: 55%;
     }
 }
