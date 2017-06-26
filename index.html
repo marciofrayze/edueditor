@@ -17,7 +17,8 @@
   <div id="editorcontainer">
 
     <div id="menu">
-      <button onclick="executeCode();">
+      <button onclick="executeCode();" 
+              title="Executes your code (shortcut: ALT+R)">
         <i class="fa fa-play" aria-hidden="true"></i> Run
       </button>
 
@@ -39,17 +40,19 @@
       </div>
 
       <div id="editorOptions">
-        <input type="checkbox" 
-              id="enableAutoPairing"
-              value="false" 
-              onchange="autoPairingChanged(this);"/><label for="enableAutoPairing">Auto-pairing</label>
-
+        <label title="Auto closes/pairs parentheses, brackets, quotes, etc.">
+          <input type="checkbox"
+                 id="enableAutoPairing"
+                 value="false"
+                 onchange="autoPairingChanged(this);"/>Auto-pairing
+        </label>
         <br />
-        <input type="checkbox" 
-              id="enableAutoComplete"
-              value="false" 
-              onchange="autoCompleteChanged(this);"/><label for="enableAutoComplete">Auto-complete</label>
-        
+        <label title="Auto completes code when hitting CTRL+SPACE.">
+          <input type="checkbox"
+                id="enableAutoComplete"
+                value="false"
+                onchange="autoCompleteChanged(this);"/>Auto-complete
+          </label>
       </div>
 
     </div>

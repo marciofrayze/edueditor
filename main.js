@@ -157,13 +157,14 @@ window.onload = function() {
     editor.setBehavioursEnabled(false);
 }
 
+// Adding keyboard shortcut for "Run" button.
 document.onkeydown = function(e) {
 
     // For IEs window event-object.
     var e = e || window.event; 
 
     // The "R" key is the 82 code, so let's Run the code when the user presses CTR + R.
-    if (e.ctrlKey && e.which == 82) { 
+    if (e.altKey && e.which == 82) { 
         executeCode();
      }
 
