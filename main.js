@@ -18,7 +18,7 @@ function executeCode() {
     printExecutionHeaderOnConsole();
 
     // Checking if editor is loaded properly already.
-    if (editor == null || editor.getValue == null) {
+    if (typeof editor == 'undefined') {
         console.log("The Editor library (Ace) is not loaded yet. Please try again in a few seconds.");
         return;
     }
@@ -57,7 +57,7 @@ function executeCode() {
 function executeRubyCode(codeToEval) {
 
     // Testing if Opan is loaded. If not, just shows a warning message and do not try to run the code.
-    if (Opal == null || Opan.compile == null) {
+    if (typeof Opal == 'undefined') {
         console.log("The Ruby library (Opan) is not loaded yet. Please try again in a few seconds.")
         return;
     }
@@ -74,7 +74,7 @@ function executeRubyCode(codeToEval) {
 function executePythonCode(codeToEval) {
 
     // Testing if Brython is loaded. If not, just shows a warning message and do not try to run the code.
-    if (brython == null || brython.$eval == null) {
+    if (typeof brython == 'undefined') {
         console.log("The Python library (Brython) is not loaded yet. Please try again in a few seconds.")
         return;
     }
