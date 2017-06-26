@@ -93,15 +93,8 @@ function executeJavaScriptCode(codeToEval) {
     return result;
 }
 
-function loadSample() {
-    alert("Load sample option is not implemented yet :(")
-}
-
-function helpMe() {
-    alert("Help option is not implemented yet :(")
-}
-
 function autoCompleteChanged(el) {
+
     if (el.checked) {
         editor.setOptions({
             enableBasicAutocompletion: true
@@ -115,11 +108,13 @@ function autoCompleteChanged(el) {
 }
 
 function autoPairingChanged(el) {
+
     if (el.checked) {
         editor.setBehavioursEnabled(true);
     } else {
         editor.setBehavioursEnabled(false);
     }
+
 }
 
 function languageSelectChanged(el) {
@@ -163,7 +158,7 @@ document.onkeydown = function(e) {
     // For IEs window event-object.
     var e = e || window.event; 
 
-    // The "R" key is the 82 code, so let's Run the code when the user presses CTR + R.
+    // The "R" key is the 82 code, so let's Run the code when the user presses ALT + R.
     if (e.altKey && e.which == 82) { 
         executeCode();
      }
