@@ -56,9 +56,9 @@ function executeCode() {
 
 function executeRubyCode(codeToEval) {
 
-    // Testing if Opan is loaded. If not, just shows a warning message and do not try to run the code.
+    // Testing if Opal is loaded. If not, just shows a warning message and do not try to run the code.
     if (typeof Opal == 'undefined') {
-        console.log("The Ruby library (Opan) is not loaded yet. Please try again in a few seconds.")
+        console.log("The Ruby library (Opal) is not loaded yet. Please try again in a few seconds.")
         return;
     }
 
