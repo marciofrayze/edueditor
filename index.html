@@ -33,6 +33,7 @@
         <label>Language</label><br />
         <select id="selectLanguage" onchange="languageSelectChanged(this);">
           <option value="javascript">JavaScript (ECMAScript)</option>
+          <option value="python">Python</option>
           <option value="ruby">Ruby</option>
         </select>
       </div>
@@ -63,12 +64,22 @@ EduEditor, the Educational Editor. V0.1 - CopyLeft 2017.</textarea>
 
   </div>
 
+  <!-- Ace editor -->
   <script src="libs/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-  <script src="libs/ace/ext-language_tools.js"></script>
-  <script src="libs/opal/opal.min.js"></script>
-  <script src="libs/opal/opal-parser.min.js"></script>
+  <script src="libs/ace/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
+  <script async src="libs/ace/mode-ruby.js" type="text/javascript" charset="utf-8"></script>
+  <script async src="libs/ace/mode-python.js" type="text/javascript" charset="utf-8"></script>
 
+  <!-- Opan (Ruby) -->
+  <script src="libs/opal/opal.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="libs/opal/opal-parser.min.js" type="text/javascript" charset="utf-8"></script>
+
+  <!-- Brython (Python) -->
+  <script src="libs/brython/brython.js" type="text/javascript" charset="utf-8"></script>
+  <script src="libs/brython/brython_stdlib.js" type="text/javascript" charset="utf-8"></script>  
+    
   <script>
+      // Loads and configure Ace editor.
       ace.require("ace/ext/language_tools");
       let editor = ace.edit("usercode");
       editor.setTheme("ace/theme/twilight");
@@ -76,7 +87,11 @@ EduEditor, the Educational Editor. V0.1 - CopyLeft 2017.</textarea>
       editor.setFontSize(15);
       editor.focus();
 
+      // Loads Open (ruby)
       Opal.load('opal-parser');
+
+      // Loads Brython (python)
+      brython(1);
   </script>
 
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" lazyload>

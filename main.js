@@ -26,6 +26,9 @@ function executeCode() {
             case "javascript":
                 result = executeJavaScriptCode(codeToEval);
                 break;
+            case "python":
+                result = executePythonCode(codeToEval);
+                break;                
             case "ruby":
                 result = executeRubyCode(codeToEval);
                 break;                
@@ -45,9 +48,31 @@ function executeCode() {
 }
 
 function executeRubyCode(codeToEval) {
+
+    // Testing if Opan is loaded. If not, just shows a warning message and do not try to run the code.
+    if (Opal == null || Opan.compile == null) {
+        console.log("The Ruby library (Opan) is not loaded yet. Please try again in a few seconds.")
+        return;
+    }
+
     let transpiledCodeFromRubyToJS = Opal.compile(codeToEval)
 
     let result = eval(transpiledCodeFromRubyToJS);
+
+    // TODO: For some reason it is adding a blank link (or in some cases object) in the end of the result.
+
+    return result;
+}
+
+function executePythonCode(codeToEval) {
+
+    // Testing if Brython is loaded. If not, just shows a warning message and do not try to run the code.
+    if (brython == null || brython.$eval == null) {
+        console.log("The Python library (Brython) is not loaded yet. Please try again in a few seconds.")
+        return;
+    }
+
+    let result = brython.$eval(codeToEval);
 
     // TODO: For some reason it is adding a blank link (or in some cases object) in the end of the result.
 
@@ -109,6 +134,9 @@ function languageSelectChanged(el) {
         case "ruby":
             editor.getSession().setMode("ace/mode/ruby");
             break;
+        case "python":
+            editor.getSession().setMode("ace/mode/python");
+            break;            
         default:
             console.log("\nERROR:\n Language not supported: " + selectedLanguage);           
     }    
