@@ -102,6 +102,19 @@ function executeJavaScriptCode(codeToEval) {
 
 function autoCompleteChanged(el) {
 
+    // Do not let the user change this if the Ace editor is not loaded yet.
+    if (typeof editor == 'undefined') {
+        console.log("The Editor library (Ace) is not loaded yet. Please try again in a few seconds.");
+        el.checked = false;
+        return;
+    }
+
+
+    if (typeof editor == 'undefined') {
+        console.log("The Ruby library (Opal) is not loaded yet. Please try again in a few seconds.")
+        return;
+    }
+
     if (el.checked) {
         editor.setOptions({
             enableBasicAutocompletion: true
@@ -115,6 +128,13 @@ function autoCompleteChanged(el) {
 }
 
 function autoPairingChanged(el) {
+
+    // Do not let the user change this if the Ace editor is not loaded yet.
+    if (typeof editor == 'undefined') {
+        console.log("The Editor library (Ace) is not loaded yet. Please try again in a few seconds.");
+        el.checked = false;
+        return;
+    }    
 
     if (el.checked) {
         editor.setBehavioursEnabled(true);
