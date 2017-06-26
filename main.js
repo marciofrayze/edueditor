@@ -16,6 +16,13 @@ function executeCode() {
 
     clearConsole();   
     printExecutionHeaderOnConsole();
+
+    // Checking if editor is loaded properly already.
+    if (editor == null || editor.getValue == null) {
+        console.log("The Editor library (Ace) is not loaded yet. Please try again in a few seconds.");
+        return;
+    }
+
     let codeToEval = editor.getValue();
 
     let selectedLanguage = getSelectedLanguage();
