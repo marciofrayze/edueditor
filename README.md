@@ -1,7 +1,17 @@
-# Simple JavaScript and Ruby on-line Editor
+# EduEditor - the Educational Editor
 
-Just another simple on-line JavaScript and Ruby editor. Just type your code and hit "Run"! :)
+Yet another simple on-line JavaScript and Ruby editor. Just type your code and hit "Run"! Your program will be executed inside your browser!
 
-The goal is to create a simple and easy to use environment so teachers and students can test and learn how to program.
+The goal is to create a simple and easy to use environment for teachers and students.
 
-Available at: https://edueditor.tech
+Editor available at: https://edueditor.tech
+
+# A big thanks to...
+
+Ace Editor - https://ace.c9.io/
+
+Opal - http://opalrb.org/
+
+# About the author
+
+*EduEditor* was created by Marcio Frayze David - mfdavid@gmail.com - Copyleft 2017.
