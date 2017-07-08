@@ -1,5 +1,5 @@
 
-// Overrides console to show on the onscren-console but keeping reference to original console.log function.
+// Overrides console to show on the on-screen console but keeping reference to original console.log function.
 let _console = console.log;
 console.log = function(somethingToLog){
     let resultTextArea = document.getElementById("executionresult");
