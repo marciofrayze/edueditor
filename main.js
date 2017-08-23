@@ -19,7 +19,7 @@ function executeCode() {
 
     // Checking if editor is loaded properly already.
     if (typeof editor == 'undefined') {
-        console.log("The Editor library (Ace) is not loaded yet. Please try again in a few seconds.");
+        console.log("\nERROR:\nThe Editor library (Ace) is not loaded yet. Please try again in a few seconds.");
         return;
     }
 
@@ -40,7 +40,7 @@ function executeCode() {
                 result = executeRubyCode(codeToEval);
                 break;                
             default:
-                console.log("\nERROR:\n Language not supported: " + selectedLanguage);
+                console.log("\nERROR:\nLanguage not supported: " + selectedLanguage);
         }
 
         if (result != null) {
@@ -58,7 +58,7 @@ function executeRubyCode(codeToEval) {
 
     // Testing if Opal is loaded. If not, just shows a warning message and do not try to run the code.
     if (typeof Opal == 'undefined') {
-        console.log("The Ruby library (Opal) is not loaded yet. Please try again in a few seconds.")
+        console.log("\nERROR:\nThe Ruby library (Opal) is not loaded yet. Please try again in a few seconds.")
         return;
     }
 
@@ -75,7 +75,7 @@ function executePythonCode(codeToEval) {
 
     // Testing if Brython is loaded. If not, just shows a warning message and do not try to run the code.
     if (typeof brython == 'undefined') {
-        console.log("The Python library (Brython) is not loaded yet. Please try again in a few seconds.")
+        console.log("\nERROR:\nThe Python library (Brython) is not loaded yet. Please try again in a few seconds.")
         return;
     }
 
@@ -104,14 +104,13 @@ function autoCompleteChanged(el) {
 
     // Do not let the user change this if the Ace editor is not loaded yet.
     if (typeof editor == 'undefined') {
-        console.log("The Editor library (Ace) is not loaded yet. Please try again in a few seconds.");
+        console.log("\nERROR:\nThe Editor library (Ace) is not loaded yet. Please try again in a few seconds.");
         el.checked = false;
         return;
     }
 
-
     if (typeof editor == 'undefined') {
-        console.log("The Ruby library (Opal) is not loaded yet. Please try again in a few seconds.")
+        console.log("\nERROR:\nThe Ruby library (Opal) is not loaded yet. Please try again in a few seconds.")
         return;
     }
 
@@ -131,7 +130,7 @@ function autoPairingChanged(el) {
 
     // Do not let the user change this if the Ace editor is not loaded yet.
     if (typeof editor == 'undefined') {
-        console.log("The Editor library (Ace) is not loaded yet. Please try again in a few seconds.");
+        console.log("\nERROR:\nThe Editor library (Ace) is not loaded yet. Please try again in a few seconds.");
         el.checked = false;
         return;
     }    
@@ -145,7 +144,14 @@ function autoPairingChanged(el) {
 }
 
 function languageSelectChanged(el) {
-    
+
+    // Do not let the user change this if the Ace editor is not loaded yet.
+    if (typeof editor == 'undefined') {
+        console.log("\nERROR:\nThe Editor library (Ace) is not loaded yet. Please try again in a few seconds.");
+        el.options.selectedIndex = 0;
+        return;
+    }    
+
     let selectedLanguage = el.value;
 
     switch(selectedLanguage) {
@@ -160,23 +166,31 @@ function languageSelectChanged(el) {
             editor.getSession().setMode("ace/mode/python");
             break;            
         default:
-            console.log("\nERROR:\n Language not supported: " + selectedLanguage);           
+            console.log("\nERROR:\nLanguage not supported: " + selectedLanguage);           
     }    
 }
 
 function themeSelectChanged(el) {
+
+    // Do not let the user change this if the Ace editor is not loaded yet.
+    if (typeof editor == 'undefined') {
+        console.log("\nERROR:\nThe Editor library (Ace) is not loaded yet. Please try again in a few seconds.");
+        el.options.selectedIndex = 0;
+        return;
+    }    
+
     let selectedTheme = el.value;
     
-        switch(selectedTheme) {
-            case "bright":
-                editor.setTheme("ace/theme/tomorrow");
-                break;
-            case "dark":
-                editor.setTheme("ace/theme/twilight");
-                break;
-            default:
-                console.log("\nERROR:\n Theme not supported: " + selectedTheme);           
-        }    
+    switch(selectedTheme) {
+        case "bright":
+            editor.setTheme("ace/theme/tomorrow");
+            break;
+        case "dark":
+            editor.setTheme("ace/theme/twilight");
+            break;
+        default:
+            console.log("\nERROR:\nTheme not supported: " + selectedTheme);           
+    }    
 }
 
 function getSelectedLanguage() {
