@@ -81,14 +81,14 @@ select {
     height: 25px;
 }
 
-#selectLanguageContainer {
+#selectLanguageContainer, #selectThemeContainer {
     text-align:center;
     margin-left: 3px;
 }
 
 /* For screens with limited width (eg. cellphones on portrait mode). */
 @media only screen and (max-width: 500px) { 
-    #editorOptions {
+    #editorOptions, #selectThemeContainer {
         display: none;
     }
 

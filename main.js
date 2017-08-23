@@ -164,6 +164,21 @@ function languageSelectChanged(el) {
     }    
 }
 
+function themeSelectChanged(el) {
+    let selectedTheme = el.value;
+    
+        switch(selectedTheme) {
+            case "bright":
+                editor.setTheme("ace/theme/tomorrow");
+                break;
+            case "dark":
+                editor.setTheme("ace/theme/twilight");
+                break;
+            default:
+                console.log("\nERROR:\n Theme not supported: " + selectedTheme);           
+        }    
+}
+
 function getSelectedLanguage() {
     return document.getElementById("selectLanguage").value;
 }

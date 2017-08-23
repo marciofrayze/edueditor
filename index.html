@@ -41,6 +41,17 @@
         </select>
       </div>
 
+      <div id="selectThemeContainer">
+        <label>Theme</label><br />
+        <select id="selectTheme"
+                title="Choose a Theme to use."
+                onchange="themeSelectChanged(this);"
+                style="min-width:8em;">
+          <option value="bright">Bright</option>
+          <option value="dark">Dark</option>
+        </select>
+      </div>
+
       <div id="editorOptions">
         <label title="Auto closes/pairs parentheses, brackets, quotes, etc.">
           <input type="checkbox"
@@ -65,7 +76,7 @@
               readonly>Type your code on the editor above and click "Run".
 The result of the execution will be displayed here.
 
-EduEditor, the Educational Editor. V0.1 - CopyLeft 2017.</textarea>
+EduEditor, the Educational Editor. V0.2 - CopyLeft 2017.</textarea>
 
   </div>
 
@@ -87,7 +98,7 @@ EduEditor, the Educational Editor. V0.1 - CopyLeft 2017.</textarea>
       // Loads and configure Ace editor.
       ace.require("ace/ext/language_tools");
       let editor = ace.edit("usercode");
-      editor.setTheme("ace/theme/twilight");
+      editor.setTheme("ace/theme/tomorrow");
       editor.session.setMode("ace/mode/javascript");
       editor.setFontSize(15);
       editor.focus();

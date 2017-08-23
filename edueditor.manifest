@@ -9,5 +9,6 @@ libs/opal/opal.min.js
 libs/opal/opal-parser.min.js
 libs/brython/brython.js
 libs/ace/theme-twilight.js
+libs/ace/theme-tomorrow.js
 libs/ace/mode-javascript.js
 libs/ace/worker-javascript.js
