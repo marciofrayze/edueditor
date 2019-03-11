@@ -17,18 +17,10 @@
   <div id="editorcontainer">
 
     <div id="menu">
-      <button onclick="executeCode();" 
+      <button onclick="executeCode();"
               title="Executes your code (shortcut: ALT+R)">
               Run
       </button>
-
-      <!-- button onclick="loadSample();">
-        <i class="fa fa-floppy-o" aria-hidden="true"></i> Load Sample
-      </button -->
-
-      <!-- button onclick="helpMe();">
-        <i class="fa fa-question" aria-hidden="true"></i> Help
-      </button -->
 
       <div id="selectLanguageContainer">
         <label>Language</label><br />
@@ -76,7 +68,7 @@
               readonly>Type your code on the editor above and click "Run".
 The result of the execution will be displayed here.
 
-EduEditor, the Educational Editor. V0.2.2 - CopyLeft 2017-2018.</textarea>
+EduEditor, the Educational Editor. V0.2.3 - CopyLeft 2017-2019.</textarea>
 
   </div>
 
@@ -103,7 +95,7 @@ EduEditor, the Educational Editor. V0.2.2 - CopyLeft 2017-2018.</textarea>
       editor.setFontSize(15);
       editor.focus();
 
-      // Loads Open (ruby).
+      // Loads Opal (ruby).
       Opal.load('opal-parser');
 
       // Loads Brython (python).
