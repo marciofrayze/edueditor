@@ -4,7 +4,7 @@ A simple on-line JavaScript, Python and Ruby editor. Just type your code and hit
 
 The goal is to create a simple and easy to use environment for teachers and students.
 
-Editor available at: https://edueditor.tech
+Editor available at: https://edueditor.com
 
 # A _BIG_ thanks to...
 
