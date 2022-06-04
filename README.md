@@ -8,11 +8,11 @@ Editor available at: https://edueditor.com
 
 # A _BIG_ thanks to...
 
-Ace Editor - https://ace.c9.io/
+Ace Editor - https://ace.c9.io
 
-Opal - http://opalrb.org/
+Opal - https://opalrb.com
 
-Brython - http://brython.info
+Brython - https://brython.info
 
 # About the author
 
