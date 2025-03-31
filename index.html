@@ -1,15 +1,17 @@
-<!DOCTYPE html><html manifest="edueditor.manifest">
+<!DOCTYPE html>
+<html manifest="edueditor.manifest">
 <html lang="en">
+
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <title>EduEditor</title>
   <script src="main.js"></script>
   <link rel="stylesheet" type="text/css" href="main.css">
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
-  <meta name="keywords" content="Educational Editor Javascript Python Ruby Typescript"/>
-  <meta name="description" content="Simple on-line editor for teaching programming."/>
-  <meta name="apple-mobile-web-app-title" content="EduEditor"/>
-  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <meta name="keywords" content="Educational Editor Javascript Python Ruby Typescript" />
+  <meta name="description" content="Simple on-line editor for teaching programming." />
+  <meta name="apple-mobile-web-app-title" content="EduEditor" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
 </head>
 
 <body>
@@ -17,16 +19,14 @@
   <div id="editorcontainer">
 
     <div id="menu">
-      <button onclick="executeCode();"
-              title="Executes your code (shortcut: ALT+R)">
-              Run
+      <button onclick="executeCode();" title="Executes your code (shortcut: ALT+R)">
+        Run
       </button>
 
       <div id="selectLanguageContainer">
         <label>Language</label><br />
-        <select id="selectLanguage"
-                title="Choose a Programming Language to use."
-                onchange="languageSelectChanged(this);">
+        <select id="selectLanguage" title="Choose a Programming Language to use."
+          onchange="languageSelectChanged(this);">
           <option value="javascript">JavaScript (ECMAScript)</option>
           <option value="python">Python</option>
           <option value="ruby">Ruby</option>
@@ -35,10 +35,8 @@
 
       <div id="selectThemeContainer">
         <label>Theme</label><br />
-        <select id="selectTheme"
-                title="Choose a Theme to use."
-                onchange="themeSelectChanged(this);"
-                style="min-width:8em;">
+        <select id="selectTheme" title="Choose a Theme to use." onchange="themeSelectChanged(this);"
+          style="min-width:8em;">
           <option value="bright">Bright</option>
           <option value="dark">Dark</option>
         </select>
@@ -46,29 +44,24 @@
 
       <div id="editorOptions">
         <label title="Auto closes/pairs parentheses, brackets, quotes, etc.">
-          <input type="checkbox"
-                 id="enableAutoPairing"
-                 value="false"
-                 onchange="autoPairingChanged(this);"/>Auto-pairing
+          <input type="checkbox" id="enableAutoPairing" value="false"
+            onchange="autoPairingChanged(this);" />Auto-pairing
         </label>
         <br />
         <label title="Auto completes code when hitting CTRL+SPACE.">
-          <input type="checkbox"
-                id="enableAutoComplete"
-                value="false"
-                onchange="autoCompleteChanged(this);"/>Auto-complete
-          </label>
+          <input type="checkbox" id="enableAutoComplete" value="false"
+            onchange="autoCompleteChanged(this);" />Auto-complete
+        </label>
       </div>
 
     </div>
 
     <pre id="usercode"></pre>
 
-    <textarea id="executionresult"
-              readonly>Type your code on the editor above and click "Run".
+    <textarea id="executionresult" readonly>Type your code on the editor above and click "Run".
 The result of the execution will be displayed here.
 
-EduEditor, the Educational Editor. V0.2.3 - CopyLeft 2017-2019.</textarea>
+EduEditor, the Educational Editor. V0.2.3 - CopyLeft 2017-2025.</textarea>
 
   </div>
 
@@ -83,24 +76,25 @@ EduEditor, the Educational Editor. V0.2.3 - CopyLeft 2017-2019.</textarea>
   <script src="libs/opal/opal-parser.min.js" type="text/javascript" charset="utf-8"></script>
 
   <!-- Brython (Python) -->
-  <script src="libs/brython/brython.js" type="text/javascript" charset="utf-8"></script>
-  <script src="libs/brython/brython_stdlib.js" type="text/javascript" charset="utf-8"></script>  
-    
+  <script src="libs/brython/brython.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="libs/brython/brython_stdlib.min.js" type="text/javascript" charset="utf-8"></script>
+
   <script>
-      // Loads and configure Ace editor.
-      ace.require("ace/ext/language_tools");
-      let editor = ace.edit("usercode");
-      editor.setTheme("ace/theme/tomorrow");
-      editor.session.setMode("ace/mode/javascript");
-      editor.setFontSize(15);
-      editor.focus();
+    // Loads and configure Ace editor.
+    ace.require("ace/ext/language_tools");
+    let editor = ace.edit("usercode");
+    editor.setTheme("ace/theme/tomorrow");
+    editor.session.setMode("ace/mode/javascript");
+    editor.setFontSize(15);
+    editor.focus();
 
-      // Loads Opal (ruby).
-      Opal.load('opal-parser');
+    // Loads Opal (ruby).
+    Opal.load('opal-parser');
 
-      // Loads Brython (python).
-      brython(1);
+    // Loads Brython (python).
+    brython(1);
   </script>
 
 </body>
+
 </html>

@@ -16,4 +16,4 @@ Brython - https://brython.info
 
 # About the author
 
-*EduEditor* was created by Marcio Frayze David - mfdavid@gmail.com - Copyleft 2017-2019.
+*EduEditor* was created by Marcio Frayze David - mfdavid@gmail.com - Copyleft 2017-2025.
