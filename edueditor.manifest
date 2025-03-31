@@ -7,7 +7,8 @@ libs/ace/mode-ruby.js
 libs/ace/mode-python.js
 libs/opal/opal.min.js
 libs/opal/opal-parser.min.js
-libs/brython/brython.js
+libs/brython/brython.min.js
+libs/brython/brython_stdlib.min.js
 libs/ace/theme-twilight.js
 libs/ace/theme-tomorrow.js
 libs/ace/mode-javascript.js
